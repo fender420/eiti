@@ -1,0 +1,386 @@
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Bold.ttf');
+}
+@font-face {
+	font-family: 'PT Sans Bold';
+	src: url('../fonts/PT_Sans-Web-Bold.ttf');
+}
+@font-face {
+	font-family: 'PT Sans';
+	src: url('../fonts/PT_Sans-Web-Regular.ttf');
+}
+
+$b-width: 984px;
+$center: 0 auto;
+$accent-color: #8cc7df;
+$h-text: 16pt/18pt 'Open Sans';
+
+body {
+	border-top: 8px solid #7291f7;
+}
+
+.wrap {
+	position: relative;
+	width: 100%;
+	border-top: 8px solid #f6e467;
+}
+
+.header {
+	position: relative;
+	height: 226px;
+	width: 100%;
+	background-color: #ededed;
+}
+
+.logo-block {
+	position: relative;
+	width: $b-width;
+	margin: $center;
+	padding-top: 60px;
+	img {
+		float: left;
+	}
+}
+
+.header-text {
+	display: inline-block;
+	width: 250px;
+	font: $h-text;
+	margin: -3px 0 0 18px;
+}
+
+.lang {
+	position: absolute;
+	right: 0;
+	top: 45px;
+	text-transform: uppercase;
+	font-family: 'PT Sans Bold';
+	font-size: 13pt;
+	span {
+		font-size: 20pt;
+		font-family: 'PT Sans';
+		color: rgba(0, 0, 0, 0.3);
+	}
+	input {
+		display: none;
+	}
+	input:checked + label{
+		text-decoration: underline;
+		color: #05b3fa;
+	}
+	label {
+		margin: 0 5px;
+	}
+	label:hover {
+		cursor: pointer;
+		color: #05b3fa;
+	}
+}
+
+.menu {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 46px;
+	background-color: #000;
+}
+
+.nav {
+	position: relative;
+	width: $b-width;
+	height: 46px;
+	margin: $center;
+	ul {
+		margin-left: -25px;
+		list-style-type: none;
+		color: #fff;
+		text-transform: uppercase;
+		font-family: 'PT Sans Bold';
+		font-size: 13pt;
+		li {
+			height: 36px;
+			float: left;
+			padding: 10px 25px 0 25px;
+			cursor: pointer;
+			a {
+				text-decoration: none;
+				color: #fff;
+			}
+			ul {
+				display: none;
+				position: absolute;
+				width: 250px;
+				height: 160px;
+				margin-top: 13px;
+				background-color: #545454;
+				list-style-type: none;
+				font-family: 'PT Sans';
+				font-size: 12pt;
+				text-transform: none;
+				z-index: 3;
+				li {
+					height: 30px;
+				}
+				li:hover {
+					color: #000;
+				}
+			}
+		}
+		li:hover {
+			background-color: #545454;
+			ul {
+				display: block;
+			}
+		}
+	}
+	input::placeholder {color: #000;}
+	input {
+		position: absolute;
+		background-color: #545454;
+		right: 30px;
+		top: 9px;
+		width: 270px;
+		height: 28px;
+		padding-left: 10px;
+		border: none;
+		border-radius: 1px;
+		font-family: 'PT Sans';
+		color: #fff;
+	}
+	img {
+		position: absolute;
+		right: 0;
+		top: 10px;
+		height: 20px;
+		width: 20px;
+		margin: 3px 0 0 10px;
+		cursor: pointer;
+	}
+}
+
+.main {
+	width: 100%;
+}
+
+.slider {
+	width: $b-width;
+	height: 250px;
+	margin: 52px auto 50px auto;
+	box-sizing: border-box;
+	border: 10px solid #96cde4;
+	border-radius: 1px;
+	box-shadow: 0 60px 50px -50px #b6cfda;
+	background-image: url(../img/slide.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.content {
+	width: $b-width;
+	margin: $center;
+	display: flex;
+	align-items: flex-start;
+
+}
+.block-head {
+	font-family: 'PT Sans';
+	font-size: 20pt;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.news {
+	position: relative;
+	height: 500px;
+	.section-list {
+		position: absolute;
+		margin-top: 10px;
+		right: 0;
+		input {
+			display: none;
+		}
+		input:checked + label{
+			color: #000;
+			font-family: 'PT Sans Bold';
+			border-bottom: none;
+		}
+		label {
+			margin-left: 10px;
+			font-family: 'PT Sans';
+			font-size: 12.5pt;
+			border-bottom: 1px dashed #05b3fa;
+			color: #05b3fa;
+			cursor: pointer;
+		}
+	}
+}
+
+.article-block {
+	position: relative;
+	width: 635px;
+	height: 190px;
+	background-color: #f5f5f5;
+	margin: 21px 0 34px 0;
+	border-radius: 1px;
+	img {
+		position: absolute;
+		margin: 22px 22px 0 22px;
+		float: left;
+	}
+}
+
+.article-head {
+	position: absolute;
+	margin: 16px 22px 0 162px;
+	font-family: 'PT Sans';
+	font-size: 16pt;
+	a {
+		color: #000;
+		text-decoration: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	}
+}
+
+.article {
+	position: absolute;
+	margin: 80px 22px 0 162px;
+	font-family: 'PT Sans';
+	font-size: 12pt;
+	line-height: 1.2;
+}
+
+.date {
+	position: absolute;
+	bottom: 10px;
+	left: 162px; 
+	font-family: 'PT Sans Bold';
+	font-size: 11pt;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.section {
+	position: absolute;
+	padding-bottom: 7px;
+	bottom: 0;
+	right: 22px; 
+	font-family: 'PT Sans Bold';
+	font-size: 11pt;
+	color: #c6ca49;
+	border-bottom: 3px solid #d4d79a;
+}
+
+.think {
+	height: 500px;
+	margin-left: 45px;
+}
+
+.expert {
+	width: 300px;
+	height: 130px;
+	margin-top: 20px;
+}
+
+.photo {
+	position: relative;
+	width: 95px;
+	height: 110px;
+	background-image: url(../img/photo.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-right: 10px;
+	float: left;
+}
+
+.expert-head {
+	position: absolute;
+	width: 150px;
+	margin: 8px 0 0 115px;
+	font-family: 'PT Sans';
+	font-size: 16pt;
+}
+
+.position {
+	position: absolute;
+	margin: 68px 0 0 115px;
+	font-family: 'PT Sans';
+	font-size: 13pt;
+}
+
+.expert-block-1 {
+	width: 300px;
+	height: 130px;
+	margin-bottom: 55px;
+	background-color: #f5f5f5;
+	box-sizing: border-box;
+	padding: 15px 20px;
+	font-family: 'PT Sans';
+	font-size: 12pt;
+	line-height: 1.3;
+	border-radius: 1px;
+	span {
+		color: #05b3fa;
+		cursor: pointer;
+	}
+}
+
+.expert-block-2, .expert-block-3 {
+	width: 300px;
+	height: 145px;
+	margin: 30px 0;
+	background-color: #8cc7df;
+	box-sizing: border-box;
+	padding: 15px 20px;
+	font-family: 'PT Sans';
+	font-size: 12pt;
+	border-radius: 1px;
+}
+
+.footer {
+	margin-top: 285px;
+	width: 100%;
+	height: 175px;
+	background-color: #000;
+}
+
+.f-block {
+	width: $b-width;
+	margin: $center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.links {
+	width: 545px;
+	display: flex;
+	color: #949494;
+	justify-content: space-around;
+	margin-top: 20px;
+	span {
+		font-family: 'PT Sans Bold';
+		font-size: 13pt;
+	}
+	ul {
+	}
+	a {
+		color: #949494;
+		font-family: 'PT Sans';
+		font-size: 10pt;
+	}
+}
+
+.foot-faq {
+	a {
+		font-family: 'PT Sans Bold';
+		font-size: 13pt;
+	}
+}
+
+.foot-logo-block {
+	margin: 20px 20px 20px 0;
+}
+
+.social-block {
+	margin-top: 20px;
+	img {
+		margin-right: 24px
+	}
+}
